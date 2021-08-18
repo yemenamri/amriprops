@@ -3,8 +3,6 @@ function Profil(props){
     const handleName=()=>{alert(props.personne.fullName)}
     return (
      <tr>
-     
-     
     
     <td>{props.personne.fullName}</td>
     <td>{props.personne.bio}</td>
@@ -15,13 +13,14 @@ function Profil(props){
         )
         
     }
-    Profil.propTypes = {
-      personne: { fullName: PropTypes.string,
-       bio: PropTypes.string,
-       profession: PropTypes.string
+    Profil.propTypes  = {
+     //personne: { fullName: PropTypes.string,
+       //bio: PropTypes.string,
+       //profession: PropTypes.string
+       personne: PropTypes.shape({fullName: PropTypes.string,bio: PropTypes.string,profession: PropTypes.string})
       }
      
-     };
+     ;
      Profil.defaultProps = {
        personne: {fullName: 'AMRI',
        bio: 'INF',
